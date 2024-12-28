@@ -1,0 +1,122 @@
+<strong>{{ $var }}</strong>
+<p>Echo content</p>
+
+<strong>{{ $var or 'default' }}</strong>
+<p>Echo content with a default value</p>
+
+<strong>{{{ $var }}}</strong>
+<p>Echo escaped content</p>
+
+<strong>{{-- Comment --}}</strong>
+<p>A Blade comment</p>
+
+<strong>@extends('layout')</strong>
+<p>Extends a template with a layout</p>
+
+<strong>@if(condition)</strong>
+<p>Starts an if block</p>
+
+<strong>@else</strong>
+<p>Starts an else block</p>
+
+<strong>@elseif(condition)</strong>
+<p>Start a elseif block</p>
+
+<strong>@endif</strong>
+<p>Ends a if block</p>
+
+<strong>@foreach($list as $key => $val)</strong>
+<p>Starts a foreach block</p>
+
+<strong>@endforeach</strong>
+<p>Ends a foreach block</p>
+
+<strong>@for($i = 0; $i <strong 10; $i++)</strong>
+        <p>
+            Starts a for block</p>
+
+        <strong>@endfor</strong>
+        <p>
+            Ends a for block</p>
+
+        <strong>@while(condition)</strong>
+        <p>
+            Starts a while block</p>
+
+        <strong>@endwhile</strong>
+        <p>
+            Ends a while block</p>
+
+        <strong>@unless(condition)</strong>
+        <p>
+            Starts an unless block</p>
+
+        <strong>@endunless</strong>
+        <p>
+            Ends an unless block</p>
+
+        <strong>@include(file)</strong>
+        <p>
+            Includes another template</p>
+
+        <strong>@include(file, ['var' => $val,...])</strong>
+        <p>
+            Includes a template, passing new variables.</p>
+
+        <strong>@each('file',$list,'item')</strong>
+        <p>
+            Renders a template on a collection</p>
+
+        <strong>@each('file',$list,'item','empty')</strong>
+        <p>
+            Renders a template on a collection or a different template if collection is empty.</p>
+
+        <strong>@yield('section')</strong>
+        <p>
+            Yields content of a section.</p>
+
+        <strong>@show</strong>
+        <p>
+            Ends section and yields its content</p>
+
+        <strong>@lang('message')</strong>
+        <p>
+            Outputs message from translation table</p>
+
+        <strong>@choice('message', $count)</strong>
+        <p>
+            Outputs message with language pluralization</p>
+
+        <strong>@section('name')</strong>
+        <p>
+            Starts a section</p>
+
+        <strong>@stop</strong>
+        <p>
+            Ends section</p>
+
+        <strong>@endsection</strong>
+        <p>
+            Ends section</p>
+
+        <strong>@append</strong>
+        <p>
+            Ends section and appends it to existing of section of same name</p>
+
+        <strong>@overwrite</strong>
+        <p>
+            Ends section, overwriting previous section of same name</p>
+
+        <p>@Isset($records)</p>
+        <p>// $records is defined and is not null...</p>
+        <p>@endisset</p>
+        <p>@production</p>
+        <p>//code to be displayed just when .env is set to production</p>
+        <p>@endproduction</p>
+        <p>@auth</p>
+        <p>//code for logged-in users</p>
+        <p>@endauth</p>
+        <p>@guest</p>
+        <p>//code for guest users</p>
+        <p>@endguest</p>
+        <p></p>
